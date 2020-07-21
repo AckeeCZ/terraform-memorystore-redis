@@ -16,7 +16,7 @@ variable "region" {
 }
 
 variable "zone" {
-  description = "Zone of GCP project - optional parameter, if not set, the instances will be spread across the available zones"
+  description = "The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance"
   default     = null
   type        = string
 }

@@ -1,8 +1,8 @@
 # Terraform Redis instance in Memorystore store with stateful set deployment to GKE
 
 This module is here just cause we wanted to deploy Redis in Memorystore and create proxy pod for it to create simple
-access for developers. Once everything is deployed, use goproxie to forward traffic from a local machine. For
-normal applications running in the GPC, use `google_redis_instance_hostname` from outputs.
+access for developers. Once everything is deployed, use [goproxie](https://github.com/AckeeCZ/goproxie) to forward traffic from a local machine. For
+normal applications running in the GCP, use `google_redis_instance_hostname` from outputs.
 
 ## Usage
 
@@ -63,7 +63,7 @@ the environment.
 | project | Name of GCP project | `string` | n/a | yes |
 | region | GCP region | `string` | `"europe-west3"` | no |
 | tier | The service tier of the instance. Must be one of these values: BASIC, STANDARD\_HA | `string` | `"BASIC"` | no |
-| zone | Zone of GCP project - optional parameter, if not set, the instances will be spread across the available zones | `string` | `null` | no |
+| zone | The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance | `string` | `null` | no |
 
 ## Outputs
 
