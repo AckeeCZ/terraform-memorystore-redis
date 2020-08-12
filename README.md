@@ -61,6 +61,7 @@ the environment.
 | namespace | K8s namespace used to deploy endpoints and services | `string` | `"production"` | no |
 | network | Authorized network allowed to communicate with redis instance | `string` | `"default"` | no |
 | project | Name of GCP project | `string` | n/a | yes |
+| redis\_version | Redis instance version. Must be on of these values: REDIS\_5\_0, REDIS\_4\_0, REDIS\_3\_2 | `string` | `"REDIS_4_0"` | no |
 | region | GCP region | `string` | `"europe-west3"` | no |
 | tier | The service tier of the instance. Must be one of these values: BASIC, STANDARD\_HA | `string` | `"BASIC"` | no |
 | zone | The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance | `string` | `null` | no |

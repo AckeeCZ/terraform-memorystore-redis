@@ -14,6 +14,7 @@ resource "google_redis_instance" "redis" {
   region             = var.region
   tier               = var.tier
   authorized_network = data.google_compute_network.default.id
+  redis_version      = var.redis_version
 
   depends_on = [google_project_service.redis]
 }
