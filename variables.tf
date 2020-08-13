@@ -64,3 +64,9 @@ variable "cluster_endpoint" {
   description = "Cluster control plane endpoint"
   type        = string
 }
+
+variable "redis_version" {
+  default     = "REDIS_4_0"
+  description = "Redis instance version. Must be on of these values: REDIS_5_0, REDIS_4_0, REDIS_3_2"
+  type        = string
+}
