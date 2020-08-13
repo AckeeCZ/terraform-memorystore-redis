@@ -4,32 +4,36 @@ resource "kubernetes_stateful_set" "redis" {
   metadata {
 
     labels = {
-      app = "redis"
+      app      = "redis"
+      instance = var.instance_name
     }
 
     namespace = var.namespace
-    name      = "redis"
+    name      = "redis-${var.instance_name}"
   }
 
   spec {
     selector {
       match_labels = {
         external-app = "redis"
+        instance     = var.instance_name
+
       }
     }
 
-    service_name = "redis"
+    service_name = "redis-${var.instance_name}"
 
     template {
       metadata {
         labels = {
           external-app = "redis"
+          instance     = var.instance_name
         }
       }
 
       spec {
         container {
-          name              = "redis"
+          name              = "redis-${var.instance_name}"
           image             = "alpine/socat"
           image_pull_policy = "IfNotPresent"
 
