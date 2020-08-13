@@ -3,8 +3,9 @@ data "google_compute_network" "default" {
 }
 
 resource "google_project_service" "redis" {
-  project = var.project
-  service = "redis.googleapis.com"
+  project            = var.project
+  service            = "redis.googleapis.com"
+  disable_on_destroy = false
 }
 
 resource "google_redis_instance" "redis" {
