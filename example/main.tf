@@ -1,13 +1,29 @@
-provider "template" {
-  version = "~> 2.1.2"
+provider "random" {
+  version = "~> 2.3.0"
 }
 
-provider "tls" {
-  version = "~> 2.1.1"
+provider "google" {
+  version = "~> 3.39.0"
+}
+
+provider "google-beta" {
+  version = "~> 3.39.0"
+}
+
+provider "vault" {
+  version = "~> 2.14.0"
+}
+
+provider "kubernetes" {
+  version = "~> 1.13.2"
+}
+
+provider "helm" {
+  version = "~> 1.1"
 }
 
 module "gke" {
-  source            = "git::ssh://git@gitlab.ack.ee/Infra/terraform-gke-vpc.git?ref=v6.4.0"
+  source            = "git::ssh://git@gitlab.ack.ee/Infra/terraform-gke-vpc.git?ref=v7.2.0"
   namespace         = var.namespace
   project           = var.project
   location          = var.zone

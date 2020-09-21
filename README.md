@@ -39,14 +39,13 @@ the environment.
 | Name | Version |
 |------|---------|
 | terraform | >= 0.12 |
-| kubernetes | ~> 1.11.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | google | n/a |
-| kubernetes | ~> 1.11.0 |
+| kubernetes | n/a |
 
 ## Inputs
 
