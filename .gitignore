@@ -1,4 +1,3 @@
-example/.terraform.tfstate.lock.info
-example/terraform.tfstate.backup
-example/terraform.tfstate
 .terraform
+example/terraform*
+example/.terraform*
