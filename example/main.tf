@@ -40,8 +40,7 @@ module "redis" {
   project                = var.project
   namespace              = var.namespace
   cluster_ca_certificate = module.gke.cluster_ca_certificate
-  cluster_user           = module.gke.cluster_username
-  cluster_password       = module.gke.cluster_password
+  cluster_token          = module.gke.access_token
   cluster_endpoint       = module.gke.endpoint
 }
 
