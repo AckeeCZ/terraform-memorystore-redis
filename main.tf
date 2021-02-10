@@ -16,6 +16,7 @@ resource "google_redis_instance" "redis" {
   tier               = var.tier
   authorized_network = data.google_compute_network.default.id
   redis_version      = var.redis_version
+  display_name       = var.display_name == "" ? var.instance_name : var.display_name
 
   depends_on = [google_project_service.redis]
 }

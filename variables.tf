@@ -27,6 +27,12 @@ variable "instance_name" {
   type        = string
 }
 
+variable "display_name" {
+  description = "Redis instances display name, if empty taken from instance_name"
+  default     = ""
+  type        = string
+}
+
 variable "tier" {
   description = "The service tier of the instance. Must be one of these values: BASIC, STANDARD_HA"
   default     = "BASIC"
