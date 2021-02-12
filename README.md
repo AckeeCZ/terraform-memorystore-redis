@@ -53,8 +53,7 @@ the environment.
 |------|-------------|------|---------|:--------:|
 | cluster\_ca\_certificate | Public CA certificate that is the root of trust for the GKE K8s cluster | `string` | n/a | yes |
 | cluster\_endpoint | Cluster control plane endpoint | `string` | n/a | yes |
-| cluster\_password | Cluster master password, keep always secret! | `string` | n/a | yes |
-| cluster\_user | Cluster master username, keep always secret! | `string` | n/a | yes |
+| cluster\_token | Cluster master token, keep always secret! | `string` | n/a | yes |
 | instance\_name | Redis instances name | `string` | `"redis"` | no |
 | memory\_size\_gb | Redis memory size in GiB | `number` | `1` | no |
 | namespace | K8s namespace used to deploy endpoints and services | `string` | `"production"` | no |
