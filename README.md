@@ -8,7 +8,7 @@ normal applications running in the GCP, use `google_redis_instance_hostname` fro
 
 ```hcl
 module "redis" {
-  source = "git::ssh://git@github.com:AckeeCZ/terraform-memorystore-redis.git"
+  source = "AckeeCZ/redis/memorystore"
 
   project                = var.project
   namespace              = var.namespace
