@@ -15,11 +15,11 @@ provider "vault" {
 }
 
 provider "kubernetes" {
-  version = "~> 1.13.2"
+  version = "~> 2.1.0"
 }
 
 provider "helm" {
-  version = "~> 1.1"
+  version = "~> 2.0.0"
 }
 
 module "gke" {
