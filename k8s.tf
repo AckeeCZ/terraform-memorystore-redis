@@ -47,11 +47,11 @@ resource "kubernetes_stateful_set" "redis" {
             host_port      = 6379
           }
           resources {
-            limits {
+            limits = {
               cpu    = "100m"
               memory = "100Mi"
             }
-            requests {
+            requests = {
               cpu    = "10m"
               memory = "10Mi"
             }
