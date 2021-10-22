@@ -23,7 +23,7 @@ provider "helm" {
 }
 
 module "gke" {
-  source            = "git::ssh://git@gitlab.ack.ee/Infra/terraform-gke-vpc.git?ref=v9.5.0"
+  source            = "git::ssh://git@gitlab.ack.ee/Infra/terraform-gke-vpc.git?ref=v9.8.0"
   namespace         = var.namespace
   project           = var.project
   location          = var.zone
