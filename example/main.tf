@@ -19,7 +19,7 @@ provider "kubernetes" {
 }
 
 provider "helm" {
-  version = "~> 2.1.0"
+  version = "~> 2.9.0"
 }
 
 module "gke" {
