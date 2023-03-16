@@ -11,7 +11,7 @@ provider "google-beta" {
 }
 
 provider "vault" {
-  version = "~> 2.20.0"
+  version = "~> 3.14.0"
 }
 
 provider "kubernetes" {
